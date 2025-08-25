@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 import { 
   Zap, 
   Sparkles, 
@@ -122,24 +123,28 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(139, 0, 255, 0.6)" }}
-            whileTap={{ scale: 0.95 }}
-            className="group px-8 py-4 bg-gradient-purple-pink rounded-full font-semibold text-white text-lg shadow-neon-purple transition-all duration-300 flex items-center gap-2"
-          >
-            <Rocket className="w-5 h-5" />
-            EXPERIMENTAR GRÁTIS
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+          <Link href="/auth/signup">
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(139, 0, 255, 0.6)" }}
+              whileTap={{ scale: 0.95 }}
+              className="group px-8 py-4 bg-gradient-purple-pink rounded-full font-semibold text-white text-lg shadow-neon-purple transition-all duration-300 flex items-center gap-2"
+            >
+              <Rocket className="w-5 h-5" />
+              EXPERIMENTAR GRÁTIS
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group px-8 py-4 glass-card backdrop-blur-glass border border-neon-blue/30 rounded-full font-semibold text-white text-lg hover:border-neon-blue/60 transition-all duration-300 flex items-center gap-2"
-          >
-            <Play className="w-5 h-5" />
-            VER DEMONSTRAÇÃO
-          </motion.button>
+          <Link href="/auth/login">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group px-8 py-4 glass-card backdrop-blur-glass border border-neon-blue/30 rounded-full font-semibold text-white text-lg hover:border-neon-blue/60 transition-all duration-300 flex items-center gap-2"
+            >
+              <Play className="w-5 h-5" />
+              FAZER LOGIN
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Stats */}
