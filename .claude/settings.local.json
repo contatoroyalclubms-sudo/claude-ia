@@ -42,13 +42,18 @@
       "Bash(git checkout:*)",
       "Read(/C:\\Users\\User\\OneDrive\\Desktop\\projetos github\\claudesistema\\SistemaUniversalEventos-UltraPerformance-v3.0.0\\paineluniversal/**)",
       "Bash(start-optimized.bat)",
-      "Bash(cmd /c:*)"
+      "Bash(cmd /c:*)",
+      "Bash(rename:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": [],
     "additionalDirectories": [
       "C:\\Users\\User\\OneDrive\\Desktop\\projetos github\\claudesistema\\SistemaUniversalEventos-UltraPerformance-v3.0.0\\paineluniversal\\frontend",
-      "C:\\Users\\User\\OneDrive\\Desktop\\projetos github\\claudesistema\\SistemaUniversalEventos-UltraPerformance-v3.0.0\\paineluniversal\\backend"
+      "C:\\Users\\User\\OneDrive\\Desktop\\projetos github\\claudesistema\\SistemaUniversalEventos-UltraPerformance-v3.0.0\\paineluniversal\\backend",
+      "C:\\Users\\User\\OneDrive\\Desktop\\projetos github\\claudesistema\\SistemaUniversalEventos-UltraPerformance-v3.0.0\\paineluniversal",
+      "C:\\Users\\User\\OneDrive\\Desktop\\MCP-PROGRAMADOR\\MCP01PROG\\torre-suprema"
     ]
   }
 }

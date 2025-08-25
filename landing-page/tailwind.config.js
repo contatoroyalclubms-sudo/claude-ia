@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Paleta Supreme Neon
+        // Supreme Neon Colors
         'neon-blue': '#00D4FF',
         'neon-purple': '#8B00FF',
         'neon-pink': '#FF0080',
@@ -17,60 +17,48 @@ module.exports = {
         'neon-orange': '#FF8C00',
         'neon-red': '#FF0044',
         'neon-cyan': '#00FFE5',
-        // Backgrounds
+        // Dark Theme
         'dark-bg': '#0A0A0B',
-        'card-bg': 'rgba(255, 255, 255, 0.05)',
-        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+        'dark-card': '#1A1A1B',
+        'dark-border': '#2A2A2B',
+        'glass-card': 'rgba(255, 255, 255, 0.1)',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'neon-gradient': 'linear-gradient(45deg, #00D4FF, #8B00FF, #FF0080)',
-        'hero-gradient': 'linear-gradient(135deg, #00D4FF 0%, #8B00FF 50%, #FF0080 100%)',
+        'gradient-supreme': 'linear-gradient(135deg, #00D4FF 0%, #8B00FF 25%, #FF0080 50%, #00FF88 100%)',
+        'gradient-purple-pink': 'linear-gradient(135deg, #8B00FF 0%, #FF0080 100%)',
+        'gradient-blue-purple': 'linear-gradient(135deg, #00D4FF 0%, #8B00FF 100%)',
+      },
+      boxShadow: {
+        'neon-blue': '0 0 20px rgba(0, 212, 255, 0.5)',
+        'neon-purple': '0 0 20px rgba(139, 0, 255, 0.5)',
+        'neon-pink': '0 0 20px rgba(255, 0, 128, 0.5)',
+        'neon-green': '0 0 20px rgba(0, 255, 136, 0.5)',
+      },
+      backdropBlur: {
+        'glass': '16px',
       },
       animation: {
-        'pulse-neon': 'pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
-        'gradient-shift': 'gradient-shift 3s ease infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        'pulse-neon': 'pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'gradient': 'gradient 8s linear infinite',
       },
       keyframes: {
-        'pulse-neon': {
-          '0%, 100%': {
-            opacity: 1,
-            boxShadow: '0 0 20px #00D4FF, 0 0 40px #00D4FF, 0 0 60px #00D4FF',
-          },
-          '50%': {
-            opacity: 0.8,
-            boxShadow: '0 0 10px #00D4FF, 0 0 20px #00D4FF, 0 0 30px #00D4FF',
-          },
-        },
-        'float': {
+        float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
         },
-        'gradient-shift': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+        'pulse-neon': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         },
-        'glow': {
-          '0%': { textShadow: '0 0 20px #00D4FF, 0 0 30px #00D4FF, 0 0 40px #00D4FF' },
-          '100%': { textShadow: '0 0 10px #00D4FF, 0 0 20px #00D4FF, 0 0 30px #00D4FF' },
+        gradient: {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
         },
-      },
-      backdropBlur: {
-        xs: '2px',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'monospace'],
-      },
-      fontSize: {
-        '7xl': '5rem',
-        '8xl': '6rem',
-        '9xl': '7rem',
-      },
+        'supreme': ['Inter', 'system-ui', 'sans-serif'],
+      }
     },
   },
   plugins: [],
