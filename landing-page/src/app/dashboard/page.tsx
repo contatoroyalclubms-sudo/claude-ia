@@ -29,23 +29,15 @@ export default function DashboardPage() {
   const supabase = createClient()
 
   useEffect(() => {
-    checkUser()
-  }, [])
-
-  const checkUser = async () => {
-    try {
-      const { data: { user } } = await supabase.auth.getUser()
-      if (!user) {
-        router.push('/auth/login')
-      } else {
-        setUser(user)
+    // Demo mode - simular usuário logado
+    setUser({
+      email: 'demo@supremesystem.com',
+      user_metadata: {
+        name: 'Usuário Demo'
       }
-    } catch (error) {
-      router.push('/auth/login')
-    } finally {
-      setLoading(false)
-    }
-  }
+    })
+    setLoading(false)
+  }, [])
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()

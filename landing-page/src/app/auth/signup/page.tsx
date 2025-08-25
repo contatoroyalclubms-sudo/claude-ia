@@ -33,26 +33,15 @@ export default function SignupPage() {
       return
     }
 
-    try {
-      const { error } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
-        options: {
-          data: {
-            name: formData.name,
-            phone: formData.phone,
-          }
-        }
-      })
-
-      if (error) throw error
-
-      router.push('/auth/verify-email')
-    } catch (error: any) {
-      setError(error.message || 'Erro ao criar conta')
-    } finally {
-      setLoading(false)
-    }
+    // Demo mode - simular criação de conta
+    setTimeout(() => {
+      if (formData.name && formData.email && formData.password) {
+        router.push('/dashboard')
+      } else {
+        setError('Por favor, preencha todos os campos')
+        setLoading(false)
+      }
+    }, 1000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

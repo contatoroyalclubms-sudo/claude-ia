@@ -21,20 +21,15 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
 
-    try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      })
-
-      if (error) throw error
-
-      router.push('/dashboard')
-    } catch (error: any) {
-      setError(error.message || 'Erro ao fazer login')
-    } finally {
-      setLoading(false)
-    }
+    // Demo mode - aceitar qualquer credencial
+    setTimeout(() => {
+      if (email && password) {
+        router.push('/dashboard')
+      } else {
+        setError('Por favor, preencha todos os campos')
+        setLoading(false)
+      }
+    }, 1000)
   }
 
   return (
